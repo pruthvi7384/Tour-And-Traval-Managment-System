@@ -1,0 +1,836 @@
+/* ===========Import Google Fonts=========== */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Lato:ital,wght@0,400;0,700;1,700&display=swap');
+/* ========X===Import Google Fonts===X======== */
+
+*{
+    padding : 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===========CSS Styling Color and Fonts Deffined=========== */
+    :root{
+        --font-family:'Heebo', sans-serif;
+        --font-weigh4:400;
+        --font-weigh5:500;
+        --font-weigh6:600;
+        --font-weigh7:700;
+        --color1: #3fc8fd;
+        --color2: #FFFFFF;
+        --color3: #ACB1B4;
+        --color4: #253745;
+        --color5: #737A80;
+        --color6: #02121E;
+        --color7:#3fc8fd;
+        --color8: #FF0000;
+        --bgColor:#D6EAF8;
+        --box-shadow: 0 0 20px rgb(0 0 0 / 5%);
+        --box-shadowcard:  0 4px 16px rgb(0 0 0 / 10%);
+    }
+/* ========X===CSS Styling Color and Fonts Deffined===X======== */
+
+/* ===========Common Styling=========== */
+    ul{
+        list-style-type: none;
+        margin-bottom: 0rem;
+    }
+    a{
+       
+        text-decoration: none;
+        color: inherit;
+    }
+    a:hover{
+        color: inherit;
+    }
+/* =========X==Common Styling==X========= */
+
+/* ===============NavBar Components Styling============== */
+    .navbar .container-fluid{
+       
+        padding: 0px 15px;
+        background-color: var(--color2);
+        box-shadow: var(--box-shadow);
+    }
+    .navbar .navbar-brand img{
+        width: 150px;
+        object-fit: contain;
+    }
+    .navbar .container-fluid .navbar-nav .nav-link{
+        color: var(--color4);
+        font-size: 18px;
+        padding: 8px 10px;
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+        transition: 0.4s ease-in-out;
+    }
+    .navbar .container-fluid .navbar-nav .nav-link:hover{
+        color: var(--color1);
+    }
+    .navbar .container-fluid .navbar-nav .active{
+        color: var(--color1);
+    }
+    .navbar .dropdown-item {
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+        color: var(--color4);
+    }
+    .navbar .dropdown-item:focus{
+        background-color: var(--color1);
+        color: var(--color2);
+    }
+/* ===========X===NavBar Components Styling===X=========== */
+
+/* ================Footer Components Styling============= */
+    .footer{
+        background-color: var(--bgColor);
+        padding: 30px;
+    }
+    .footer .footer_social{
+        padding: 10px;
+        text-align: center;
+    }
+    .footer .social_icons{
+        margin-top: 8px;
+    }
+    .footer .footer_social .footer_paragraph p{
+        padding-top: 08px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--color4);
+    }
+    .footer .social_icons ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer .social_icons ul li{
+        margin: 0px 10px;
+        font-size: 28px;
+    }
+    .footer .social_icons ul li .fa-youtube{
+        color: #c4302b;
+    }
+    .footer .social_icons ul li .fa-instagram{
+        color: #bc2a8d;
+    }
+    .footer .social_icons ul li .fa-facebook-f{
+        color: #4267B2;
+    }
+    .footer .footer_social .footer_logo img{
+        width: 200px;
+        object-fit: contain;
+    }
+    .footer .footer-links, .footer .footer-contact{
+        padding : 10px;
+    }
+    .footer .footer-links h3,.footer .footer-contact h3{
+        color: var(--color6);
+        font-size: 22px;
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+        text-align: center;
+    }
+    .footer .footer-links .links,.footer .footer-contact .footer-contact-links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer .footer-links .links ul li{
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .footer .footer-links .links ul li a{
+        color: var(--color4);
+        transition: 0.4s ease-in-out;
+    }
+    .footer .footer-links .links ul li a:hover{
+        color:var(--color1);
+    }
+    .footer .footer-contact ul{
+        cursor: pointer;
+    }
+    .footer .footer-contact ul li{
+        padding-top: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--color4);
+    }
+    .footer .footer-contact ul li span i{
+        margin-right: 10px;
+        color: var(--color1);
+        font-size: 20px;
+    }
+    .footer .developer{
+        margin-top: 10px;
+        padding-top: 10px;
+        text-align: center;
+        border-top: 1px solid var(--color1);
+    }
+    .footer .developer p{
+        font-family: var(--font-family);
+        font-size: 18px;
+        margin-bottom: 0px;
+        color: var(--color4);
+        font-weight: var(--font-weigh6);
+    }
+    .footer .developer #name{
+        padding-top: 5px;
+        font-size: 16px;
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh7);
+    }
+    .footer .developer #name span{
+        color: var(--color6);
+    }
+    .footer .developer #name a{
+        color: var(--color1);
+        font-weight: var(--font-weigh7);
+    }
+    /* ====================ResponsiveNess==================== */
+        @media(max-width:'500px'){
+            .footer .footer_social .footer_paragraph p,.footer .footer-links .links ul li, .footer .footer-contact ul li{
+                font-weight: var(--font-weigh4);
+            }
+            .footer .footer-links h3,.footer .footer-contact h3{
+                font-size: 18px;
+            }
+            .footer .developer p{
+                font-size: 14px;
+            }
+            .footer .developer #name{
+                font-size: 13px;
+            }
+            .footer .developer #name,.footer .developer #name a{
+                font-weight: var(--font-weigh5);
+            }
+        }
+    /* =============X===ResponsiveNess===X================ */
+/* =============X===Footer Components Styling====X========= */
+
+/* ====================Contact Us Page================ */
+    .contact_form .heading, .about_us .heading, .signup_form .heading, .tour_packages .heading, .table_body .heading{
+        text-align: center;
+        font-family: var(--font-family);
+    }
+    .contact_form .heading h2, .about_us .heading h2, .signup_form .heading h2, .tour_packages .heading h2, .table_body .heading h2{
+        color: var(--color1);
+        font-weight: var(--font-weigh6);
+    }
+    .contact_form .heading p, .about_us .heading p, .signup_form .heading p, .tour_packages .heading p, .table_body .heading p{
+        color: var(--color5);
+        font-size: 18px;
+        font-weight: var(--font-weigh6);
+    }
+    .contact_form .contact_body {
+        align-items: center;
+    }
+    .contact_form .contact_body .contact_detaile .contact_location{
+        text-align: center;
+        padding: 20px;
+        box-shadow: var(--box-shadowcard);
+        background-color: var(--color2);
+        border-radius: 10px;
+        margin: 10px 5px;
+        cursor: pointer;
+    }
+    .contact_form .contact_body .contact_detaile .contact_location i, .contact_form .contact_body .contact_detaile .other_contact .contact_no i{
+        background-color: var(--color1);
+        color: var(--color2);
+        padding: 10px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+    .contact_form .contact_body .contact_detaile .contact_location p, .contact_form .contact_body .contact_detaile .other_contact .contact_no p{
+        color: var(--color4);
+        font-family: var(--font-family);
+        font-weight: var(--font-weight5);
+    }
+    .contact_form .contact_body .contact_detaile .other_contact{
+        cursor: pointer;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact_form .contact_body .contact_detaile .other_contact .contact_no{
+        flex-basis: 50%;
+        text-align: center;
+        padding: 20px;
+        margin: 10px 5px;
+        box-shadow: var(--box-shadowcard);
+        background-color: var(--color2);
+        border-radius: 10px;
+    }
+    .contact_form .contact_form_body{
+        background-color: var(--color2);
+        border-radius: 10px;
+        padding: 20px 30px;
+        box-shadow: var(--box-shadowcard);
+    }
+    .contact_form .contact_form_body .form-floating label{
+        font-weight: var(--font-weigh5);
+        color: var(--color4) !important;
+        font-family: var(--font-family);
+    }
+    .contact_form .contact_form_body .form-floating .form-control, .form-floating  .form-select{
+        box-shadow: 0 0px 0px rgb(0 0 0 / 10%);
+        font-weight: var(--font-weigh5);
+        font-family: var(--font-family);
+        color:var(--color4) !important;
+    }
+    .contact_form .contact_form_body .form-floating .form-control:focus, .form-floating .form-select:focus{
+        outline: 1px solid var(--color1);
+        border: 1px solid var(--color1);
+        box-shadow: var(--box-shadowcard) !important;
+    }
+    .contact_form .contact_form_body .fade p{
+        font-weight: var(--font-weight5);
+        color: var(--color4);
+        font-family: var(--font-family);
+    }
+    .contact_form .contact_form_body .contact_subit_btn{
+        text-align: center;
+    }
+    .contact_form .contact_form_body .contact_subit_btn .btn{
+        color: var(--color2);
+        font-size: 18px;
+        background-color: var(--color1);
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+    }
+    .contact_form .contact_form_body .contact_subit_btn .btn:focus{
+        box-shadow: 00px 00px 10px 4px var(--color7);
+    }
+
+    /* ===============Responsiveness Added============ */
+        @media(max-width: 500px){
+            .contact_form .contact_body .contact_detaile .other_contact{
+                flex-direction: column;
+            }
+            .contact_form .contact_body .contact_detaile .other_contact .contact_no{
+                flex-basis: 100%;
+            }
+            .contact_form .contact_body .contact_detaile .contact_location i, .contact_form .contact_body .contact_detaile .other_contact .contact_no i{
+                padding:10px 15px;
+            }
+            .contact_form .contact_body .contact_detaile .contact_location p, .contact_form .contact_body .contact_detaile .other_contact .contact_no p, .contact_form .contact_form_body .form-floating label, .contact_form .contact_form_body .fade p{
+                font-weight: var(--font-weigh4);
+            }
+        }
+    /* =============X==Responsiveness Added==X========== */
+
+/* =================X===Contact Us Page===X============= */
+
+/* ===================Our Team Section================== */
+    .team > .row{
+        justify-content: center;
+    }
+    .team .team_card{
+        font-family: var(--font-family);
+        text-align: center;
+        cursor: pointer;
+        margin: 10px;
+        padding: 20px;
+        box-shadow: var(--box-shadowcard);
+        border-radius: 10px;
+    }
+    .team .team_card img{
+        width: 250px;
+}
+    .team .team_card .employee_discription h4{
+        color: var(--color4);
+        font-weight: var(--font-weigh6);
+    }
+    .team .team_card .employee_discription h5{
+        color: var(--color5);
+        font-weight: var(--font-weigh6);
+    }
+    .team .team_card .employee_discription h6{
+        color: var(--color6);
+        font-weight: var(--font-weigh6);
+    }
+    .team .team_card .employee_discription ul{
+       display: flex;
+       justify-content: center;
+    }
+    .team .team_card .employee_discription ul li{
+        margin: 5px;
+    }
+    .team .team_card .employee_discription ul li a i{
+        color: var(--color2);
+        background-color: var(--color1);
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 50%;
+    }
+/* ===============X====Our Team Section====X============== */
+
+/* ==================About Us Page=============== */
+    .about_us .sub_heading{
+        align-items: center;
+        justify-content: center;
+    }
+    .about_us .about_values h4, .about_us .sub_heading h4{
+        text-align: center;
+        font-family: var(--font-family);
+        color: var(--color4);
+        font-weight: var(--font-weigh5);
+    }
+    .about_us .sub_heading p{
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh4);
+        color: var(--color6);
+        text-align: justify;
+        cursor: pointer;
+    }
+    .about_us .sub_heading img{
+        width: 100%;
+        object-fit: contain;
+    }
+    .about_us .sub_heading p i{
+        color: var(--color1);
+        padding: 3px;
+        font-size: 18px;
+    }
+/* ============X=====About Us Page=====X========= */
+
+/* =============Form Signup============ */
+    .signup_form .form_body{
+        justify-content: center;
+    }
+    .signup_form .form_body p{
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+        color: var(--color4);
+    }
+    .signup_form .form_body p a{
+        color: var(--color1);
+    }
+    .signup_form .form_body .form-floating label{
+        font-weight: var(--font-weigh5);
+        color: var(--color4) !important;
+        font-family: var(--font-family);
+    }
+    .signup_form .form_body .form-floating .form-control, .form-floating  .form-select{
+        box-shadow: 0 0px 0px rgb(0 0 0 / 10%);
+        font-weight: var(--font-weigh5);
+        font-family: var(--font-family);
+        color:var(--color4) !important;
+    }
+    .signup_form .form_body  .form-floating .form-control:focus, .form-floating .form-select:focus{
+        outline: 1px solid var(--color1);
+        border: 1px solid var(--color1);
+        box-shadow: var(--box-shadowcard) !important;
+    }
+    .signup_form .form_body .fade p{
+        font-weight: var(--font-weight5);
+        color: var(--color4);
+        font-family: var(--font-family);
+    }
+    .signup_form .form_body .contact_subit_btn{
+        text-align: center;
+    }
+    .signup_form .form_body  .contact_subit_btn .btn{
+        color: var(--color2);
+        font-size: 18px;
+        background-color: var(--color1);
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+    }
+    .signup_form .form_body .contact_subit_btn .btn:focus{
+        box-shadow: 00px 00px 10px 4px var(--color7);
+    }
+
+/* =========X===Form Signup===X======== */
+
+/* =============Tour Packages============== */
+    .tour_packages .tour_packages_row,.tour_packages .see_more{
+        justify-content: center;
+    }
+    .tour_packages .see_more .btn{
+        color: var(--color2);
+        font-size: 16px;
+        background-color: var(--color1);
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+    }
+    .tour_packages .tour_packages_row .see_more .btn:focus{
+        box-shadow: 00px 00px 10px 4px var(--color7);
+    }
+    .tour_packages .tour_packages_row .tour_package_card{
+        box-shadow: var(--box-shadowcard);
+        border-radius: 10px;
+        font-family: var(--font-family);
+        margin: 10px;
+    }
+    .tour_packages .tour_packages_row .tour_package_card img{
+        width: 100%;
+        object-fit: contain;
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_details,.tour_detail .details_body, .tour_detail .details_body .details{
+        margin-top: 08px;
+        padding: 10px;
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_details #h2, .tour_detail .details_body #h2{
+        font-size: 24px;
+        color: var(--color1);
+        font-weight: var(--font-weigh6);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_details #h3, .tour_detail .details_body #h3{
+        font-size: 20px;;
+        color: var(--color3);
+        font-weight: var(--font-weigh6);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_details #h4, .tour_detail .details_body #h4{
+        font-size: 16px;
+        color: var(--color4);
+        font-weight: var(--font-weigh6);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_details #h5, .tour_detail .details_body #h5{
+        font-size: 18px;
+        color: var(--color6);
+        font-weight: var(--font-weigh6);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_details #h5 span, .tour_detail .details_body #h5 #span{
+        color: var(--color1);
+        font-weight: var(--font-weigh6);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_details #h6, .tour_detail .details_body #h6{
+        font-size: 20px;
+        color: var(--color4);
+        font-weight: var(--font-weigh6);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_details #h6 span, .tour_detail .details_body #h6 span{
+        color: var(--color1);
+        font-weight: var(--font-weigh6);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_footer{
+        margin-top: 08px;
+        padding: 10px;
+        border-top: 1px solid var(--color1);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_footer ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_footer ul li{
+       margin: 5px;
+       font-size: 12px;
+       color: var(--color5);
+       font-weight: var(--font-weigh5);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_footer ul span{
+        color: var(--color1);
+        padding: 5px;
+        font-size: 18px;
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_footer ul .btn{
+        color: var(--color2);
+        font-size: 12px;
+        background-color: var(--color1);
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+    }
+    .tour_packages .tour_packages_row .tour_package_card .tour_footer ul .btn:focus{
+        box-shadow: 00px 00px 10px 4px var(--color7);
+    }
+/* ========X====Tour Packages===X========== */
+
+/* =============Tour Package Detailes=========== */
+    .tour_detail .heading h2{
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh6);
+        color: var(--color4)
+    }
+    .tour_detail .heading h2 span{
+        color: var(--color1);
+    }
+    .tour_detail .details_body{
+        justify-content: center;
+    }
+    .tour_detail .details_body img{
+        width: 100%;
+        object-fit: contain;
+    }
+    .tour_detail .details_body .more_detailes{
+        margin-top: 10px;
+    }
+    .tour_detail .book{
+        text-align: center;
+    }
+    .tour_detail .book .btn{
+        color: var(--color2);
+        font-size: 18px;
+        background-color: var(--color1);
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+        margin: 10px;
+    }
+    .tour_detail .book .btn:focus{
+        box-shadow: 00px 00px 10px 4px var(--color7);
+    }
+/* ========X====Tour Package Detailes===X======= */
+
+/* ============Comments============ */
+    .comments{
+        border-top: 1px solid var(--color1);
+        padding-top:10px;
+    }
+    .comments .heading h3{
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh6);
+        color: var(--color4);
+    }
+    .comments .heading h3 span{
+        color: var(--color1);
+        font-size: 40px;
+    }
+    .comments .comments_display{
+        font-family: var(--font-family);
+        padding: 20px;
+        margin: 10px 0px;
+        border-bottom: 1px solid var(--color1);
+        box-shadow: var(--box-shadowcard);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .comments .login{
+        text-align: right;
+    }
+    .comments .comments_display h3{
+        color: var(--color4);
+        font-size: 22px;
+        font-weight: var(--font-weigh6);
+    }
+    .comments .comments_display h4{
+        color: var(--color5);
+        font-size: 20px;
+        font-weight: var(--font-weigh5);
+    }
+    .comments .comments_display p{
+        color: var(--color6);
+        font-weight: var(--font-weigh4);
+    }
+    .comments .comments_display p span i{
+        color: var(--color1);
+        padding: 3px;
+    }
+    .comments .comment_form .form-floating label{
+        font-weight: var(--font-weigh5);
+        color: var(--color4) !important;
+        font-family: var(--font-family);
+    }
+    .comments .comment_form .form-floating .form-control, .form-floating  .form-select{
+        box-shadow: 0 0px 0px rgb(0 0 0 / 10%);
+        font-weight: var(--font-weigh5);
+        font-family: var(--font-family);
+        color:var(--color4) !important;
+    }
+    .comments .comment_form .form-floating .form-control:focus, .form-floating .form-select:focus{
+        outline: 1px solid var(--color1);
+        border: 1px solid var(--color1);
+        box-shadow: var(--box-shadowcard) !important;
+    }
+    .comments .comment_form.fade p{
+        font-weight: var(--font-weight5);
+        color: var(--color4);
+        font-family: var(--font-family);
+    }
+    .comments .comment_form .contact_subit_btn{
+        text-align: center;
+    }
+    .comments .comment_form .contact_subit_btn .btn{
+        color: var(--color2);
+        font-size: 18px;
+        background-color: var(--color1);
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+    }
+    .comments .comment_form .contact_subit_btn .btn:focus{
+        box-shadow: 00px 00px 10px 4px var(--color7);
+    }
+/* ========X===Comments===X======== */
+
+/* =========Table======= */
+    .table_body .heading h2 span{
+        color: var(--color4)
+    }
+    .table .table{
+        font-family: var(--font-family);
+    }
+/* ======X==Table==X=== */
+
+/* ==========Online Pay========= */
+    .online_payment > div{
+        text-align: center;
+        font-family: var(--font-family);
+    }
+    .online_payment > div h2{
+        color: var(--color1);
+        font-weight: var(--font-weigh6);
+    }
+    .online_payment > div p{
+        color: var(--color5);
+        font-size: 18px;
+        font-weight: var(--font-weigh6);
+    }
+    .online_payment > div p span{
+        color: var(--color1);
+    }
+    .online_payment > div .btn{
+        color: var(--color2);
+        font-size: 18px;
+        background-color: var(--color1);
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+    }
+    .online_payment > div .btn:focus{
+        box-shadow: 00px 00px 10px 4px var(--color7);
+    }
+/* ======X===Online Pay===X===== */
+
+/* ==========Home Page Styling============= */
+    .home_banner{
+        background-image: linear-gradient(120deg, rgb(161, 196, 253,0.3) 0%, rgb(194, 233, 251,0.2) 100%);
+        padding: 20px 0px;
+    }
+    .home_banner .row{
+        align-items: center;
+        justify-content: center;
+    }
+    .home_banner h1{
+        font-family: var(--font-family);
+        color: var(--color4);
+        font-weight: var(--font-weigh6);
+    }
+    .home_banner h1 span{
+        color: var(--color1);
+    }
+    .home_banner p{
+        font-family: var(--font-family);
+        color: var(--color6);
+        font-weight: var(--font-weigh6);
+        font-size: 18px;
+        margin-top: 10px;
+        text-transform: capitalize;
+    }
+    .home_banner .btn, .home_sub_Banner .btn{
+        margin-top: 10px;
+        color: var(--color2);
+        font-size: 20px;
+        background-color: var(--color1);
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh5);
+    }
+    .home_banner .btn:focus,.home_sub_Banner .btn:focus, .home_product .btn:focus{
+        box-shadow: 00px 00px 10px 4px var(--color7);
+    }
+    .home_fetures .heading, .home_product .heading, .home_team .heading, .home_contact_form .heading {
+        text-align: center;
+        font-family: var(--font-family);
+    } 
+    .home_fetures .heading h3, .home_product .heading h3, .home_team .heading h3, .home_contact_form .heading h3{
+        font-weight: var(--font-weigh6);
+        color: var(--color4);
+    }
+    .home_fetures .heading p, .home_product .heading p, .home_team .heading p, .home_contact_form .heading p{
+        font-weight: var(--font-weigh6);
+        color: var(--color5);
+        font-size: 18px;
+    }
+    .home_fetures .fetures_cards .feture_card{
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+        box-shadow: var(--box-shadowcard);
+        text-align: center;
+        border-radius: 10px;
+    }
+    .home_fetures .fetures_cards {
+        justify-content: center;
+    }
+    .home_fetures .fetures_cards .feture_card .icon{
+        background-color: var(--color1);
+        font-size: 18px;
+        color: var(--color2);
+        padding: 10px;
+        border-radius: 50%;
+        margin-bottom: 12px;
+    }
+    .home_fetures .fetures_cards .feture_card h6{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh6);
+        color: var(--color4)
+    }
+    .home_fetures .fetures_cards .feture_card p{
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh4);
+        font-size: 16px;
+        color: var(--color4)
+    }
+    .home_sub_Banner{
+        text-align: center;
+        font-family: var(--font-family);
+        font-weight: var(--font-weigh6);
+        background-image: linear-gradient(120deg, rgb(161, 196, 253,0.3) 0%, rgb(194, 233, 251,0.2) 100%);
+        background-repeat: no-repeat;
+    }
+    .home_sub_Banner h1{
+        color: var(--color4);
+    }
+    .home_sub_Banner .counter{
+        justify-content: center;
+        cursor: pointer;
+    }
+    .home_sub_Banner .counter h2{
+        margin-top: 15px;
+        font-size: 70px;
+        padding: 20px;
+        box-shadow: var(--box-shadowcard);
+        border-radius: 10px;
+        color: var(--color4);
+    }
+    .home_sub_Banner h1 span, .home_sub_Banner .counter h2 span{
+        color: var(--color1);
+    }
+    .home_sub_Banner p{
+        color: var(--color6);
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    /* ================Responsive Ness============ */
+        @media(max-width: 500px){
+            .home_banner h1{
+                font-size: 50px;
+            }
+            .home_banner p{
+                font-size: 18px;
+            }
+            .home_banner .btn{
+                font-size: 18px;
+            }
+            .home_fetures .fetures_cards .feture_card .icon{
+                padding: 10px 15px;
+            }
+        }
+    /* ===========X=====Responsive Ness===X========= */
+/* =====X====Home Page Styling====X======== */
