@@ -5,11 +5,11 @@
     // =============== =X====Site Name====X====== =======
 
     // ======================Site URL======================
-        define('FRONT_SITE_PATH','http://localhost/pruthvi/traval');
+        define('FRONT_SITE_PATH','http://localhost/pruthvi/Tour-And-Traval-Managment-System');
     // =================X====Site URL====X==================
 
     // =============Server Path==========
-        define('SERVER_PATH',$_SERVER['DOCUMENT_ROOT'].'/pruthvi/traval');
+        define('SERVER_PATH',$_SERVER['DOCUMENT_ROOT'].'/pruthvi/Tour-And-Traval-Managment-System');
     // ========X====Server Path====X=====
 
     // ==========Server Tours Package Image==========
