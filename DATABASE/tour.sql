@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2022 at 07:44 PM
+-- Generation Time: Apr 06, 2022 at 08:04 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.28
 
@@ -130,6 +130,13 @@ CREATE TABLE `comments_tour` (
   `comment_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `comments_tour`
+--
+
+INSERT INTO `comments_tour` (`id`, `tour_package_id`, `name`, `email_id`, `comment`, `comment_on`) VALUES
+(1, 1, 'Pruthviraj Rajput', 'pruthviraj.rajput011@gmail.com', 'Nice  Tour Package For Family Tour in Less Price', '2022-04-05 03:33:30');
+
 -- --------------------------------------------------------
 
 --
@@ -249,6 +256,13 @@ CREATE TABLE `tour_book` (
   `book_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tour_book`
+--
+
+INSERT INTO `tour_book` (`id`, `tour_id`, `admin_id`, `user_id`, `email_id`, `mobile_no`, `address`, `name`, `id_proof_no`, `id_proof`, `payment_status`, `payment_id`, `status`, `book_at`) VALUES
+(1, 1, 1, 1, 'pruthvirajrajput305@gmail.com', 1234567890, 'SSBT CAMPUS Jalgaon', 'Manas Jadhav', 2147483647, '335147096_amber-fort.jpg', 'Completed', 'pay_JFWtWdEppYa3pV', 0, '2022-04-05 03:39:53');
+
 -- --------------------------------------------------------
 
 --
@@ -266,6 +280,13 @@ CREATE TABLE `user` (
   `register_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `email_id`, `mobile_no`, `name`, `password`, `verification_status`, `status`, `register_on`) VALUES
+(1, 'pruthvirajrajput575@gmail.com', 1234567890, 'Pruthviraj Rajput', '202cb962ac59075b964b07152d234b70', 1, 1, '2022-04-05 03:35:52');
+
 -- --------------------------------------------------------
 
 --
@@ -277,6 +298,13 @@ CREATE TABLE `user_profile` (
   `user_id` int(11) NOT NULL,
   `address` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_profile`
+--
+
+INSERT INTO `user_profile` (`id`, `user_id`, `address`) VALUES
+(1, 1, '');
 
 --
 -- Indexes for dumped tables
@@ -392,7 +420,7 @@ ALTER TABLE `car_book`
 -- AUTO_INCREMENT for table `comments_tour`
 --
 ALTER TABLE `comments_tour`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `comment_rental`
@@ -428,19 +456,19 @@ ALTER TABLE `tourpackages`
 -- AUTO_INCREMENT for table `tour_book`
 --
 ALTER TABLE `tour_book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user_profile`
 --
 ALTER TABLE `user_profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

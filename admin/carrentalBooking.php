@@ -15,7 +15,7 @@
             $oldImage = $res['id_proof'];
             mysqli_query($con,"DELETE FROM car_book WHERE id='$id'");
             unlink(SERVER_RENTAL_BOOK_IMAGE.$oldImage);
-            redirect('tourBooking');
+            redirect('carrentalBooking');
           }
 
           if($type == 'details'){
@@ -35,7 +35,7 @@
    // ======X===Remove Car Rental Book===X=======
 
   // ============Car Rental Booked============
-      $sql = mysqli_query($con,"SELECT * FROM tour_book WHERE admin_id='".$_SESSION['ADMIN_ID']."' ORDER BY book_at DESC");
+      $sql = mysqli_query($con,"SELECT * FROM car_book WHERE admin_id='".$_SESSION['ADMIN_ID']."' ORDER BY book_on DESC");
   // ============Car Rental Booked============
 
 ?>
